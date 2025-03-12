@@ -6,7 +6,7 @@ When dealing with small sample sizes or incomplete data, a **Bayesian approach**
 
 ## Problem Setup:
 
-- **Objective**: Estimate the probability of each candidate winning an election.
+- **Objective**: Estimate the probability of each of 2 candidate winning an election.
 - **Data Availability**: Limited data (e.g., partial vote counts or small sample sizes).
 - **Goal**: Calculate credible intervals (Bayesian analog of confidence intervals) for the proportion of votes each candidate receives.
 
@@ -39,3 +39,16 @@ Here, `α_i` and `β_i` represent prior beliefs about the proportion of votes fo
 5. **Reversal of Winner**: To determine the probability that one candidate overtakes another, compute:
 
    P(p_i > p_j) = ∫₀¹ ∫₀ᵖⁱ f_p_i(x) f_p_j(y) dy dx
+
+## Multiple candidates. Two rounds
+Exit pull results:
+- **Candidate A**: 25 votes
+- **Candidate B**: 30 votes
+- **Candidate C**: 20 votes
+- **Candidate D**: 15 votes
+- **Candidate E**: 10 votes
+
+### Problem Setup:
+**Objective** : Estimate the probability of each candidate winning an election or passing to the second round if no candidate gets more than 50% of the votes.<br>
+**Data Availability** : Limited data (e.g., partial vote counts or small sample sizes).<br>
+**Goal** : Calculate credible intervals for the proportion of votes each candidate receives and determine the probabilities of winning or passing to the second round.
