@@ -14,7 +14,7 @@ When dealing with small sample sizes or incomplete data, a **Bayesian approach**
 
 1. **Likelihood**: Assume the observed vote counts follow a **binomial distribution**:
 
-   y_i ~ Binomial(n_i, p_i)
+   ![Likelihood - Binomial distribution](images/1Binomial.png)
 
 where:
 - `y_i` is the number of votes observed for candidate `i`,
@@ -23,7 +23,7 @@ where:
 
 2. **Prior**: Use a **Beta distribution** as the prior for `p_i`, which is conjugate to the binomial likelihood:
    
-   p_i ~ Beta(α_i, β_i)
+   ![Beta distribution as the prior for pi, which is conjugate to the binomial likelihood](images/2Beta.png)
 
 Here, `α_i` and `β_i` represent prior beliefs about the proportion of votes for candidate `i`. For example:
 - If no prior information is available, use a non-informative prior like `Beta(1, 1)` (uniform distribution).
@@ -31,14 +31,13 @@ Here, `α_i` and `β_i` represent prior beliefs about the proportion of votes fo
 
 3. **Posterior**: The posterior distribution for `p_i` is also a Beta distribution:
 
-   p_i | y_i ~ Beta(α_i + y_i, β_i + n_i - y_i)
-
+   ![posterior distribution for pi](images/3Beta.png)
 
 4. **Credible Interval**: Compute the credible interval (e.g., 95%) from the posterior distribution of `p_i`. This interval reflects the range of plausible values for `p_i` given the observed data and prior beliefs.
 
 5. **Reversal of Winner**: To determine the probability that one candidate overtakes another, compute:
-
-   P(p_i > p_j) = ∫₀¹ ∫₀ᵖⁱ f_p_i(x) f_p_j(y) dy dx
+   
+   ![probability of first candidate wining the second one](images/probability_integrated.png)
 
 ## Multiple candidates. Two rounds
 Exit pull results:
