@@ -33,11 +33,13 @@ Here, ![ai](images/ai.png) and ![bi](images/bi.png) represent prior beliefs abou
 
    ![posterior distribution for pi](images/3Beta.png)
 
-4. **Credible Interval**: Compute the credible interval (e.g., 95%) from the posterior distribution of `p_i`. This interval reflects the range of plausible values for `p_i` given the observed data and prior beliefs.
+4. **Credible Interval**: Compute the credible interval (e.g., 95%) from the posterior distribution of `p_i`. This interval reflects the range of plausible values for  ![pi](images/pi.png) given the observed data and prior beliefs.
 
 5. **Reversal of Winner**: To determine the probability that one candidate overtakes another, compute:
    
    ![probability of first candidate wining the second one](images/probability_integrated.png)
+
+In practice, this can be approximated using Monte Carlo sampling from the posterior distributions.
 
 ## Multiple candidates. Two rounds
 Exit pull results:
