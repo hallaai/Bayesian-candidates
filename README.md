@@ -41,6 +41,28 @@ Here, ![ai](images/ai.png) and ![bi](images/bi.png) represent prior beliefs abou
 
 In practice, this can be approximated using Monte Carlo sampling from the posterior distributions.
 
+## Explanation of the Code:
+1. **Data Input** : The observed vote counts (votes) and total sample sizes (sample_size) are provided for each candidate.
+2. **Posterior Parameters**: The posterior parameters for each candidate are calculated based on the observed data and the prior.
+3. **Credible Intervals**: The ```credible_interval``` function computes the credible interval for each candidate's vote proportion using the posterior Beta distribution.
+4. **Overtaking Probability**: The The ```prob_overtake``` function uses Monte Carlo sampling to estimate the probability that one candidate's vote proportion exceeds another's.
+## Example Output:
+For the given input data:
+
+- Candidate A: 45 votes out of 100
+- Candidate B: 55 votes out of 100
+
+The output might look like:
+
+```{text}
+Credible Intervals:
+Candidate_A: (0.357, 0.548)
+Candidate_B: (0.452, 0.643)
+Probability that Candidate A beats Candidate B: 0.1789
+```
+
+This indicates that while Candidate B currently leads, there is still a ~17.9% chance that Candidate A could overtake Candidate B given the uncertainty in the data.
+
 ## Multiple candidates. Two rounds
 Exit pull results:
 - **Candidate A**: 25 votes
