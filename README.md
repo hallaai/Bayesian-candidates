@@ -17,19 +17,19 @@ When dealing with small sample sizes or incomplete data, a **Bayesian approach**
    ![Likelihood - Binomial distribution](images/1Binomial.png)
 
 where:
-- `y_i` is the number of votes observed for candidate `i`,
-- `n_i` is the total number of votes sampled for candidate `i`,
-- `p_i` is the unknown proportion of votes for candidate `i`.
+- ![yi](images/yi.png) is the number of votes observed for candidate `i`,
+- ![ni](images/ni.png) is the total number of votes sampled for candidate `i`,
+- ![pi](images/pi.png) is the unknown proportion of votes for candidate `i`.
 
-2. **Prior**: Use a **Beta distribution** as the prior for `p_i`, which is conjugate to the binomial likelihood:
+2. **Prior**: Use a **Beta distribution** as the prior for ![pi](images/pi.png), which is conjugate to the binomial likelihood:
    
    ![Beta distribution as the prior for pi, which is conjugate to the binomial likelihood](images/2Beta.png)
 
-Here, `α_i` and `β_i` represent prior beliefs about the proportion of votes for candidate `i`. For example:
+Here, ![ai](images/ai.png) and ![bi](images/bi.png) represent prior beliefs about the proportion of votes for candidate `i`. For example:
 - If no prior information is available, use a non-informative prior like `Beta(1, 1)` (uniform distribution).
-- If you have prior knowledge (e.g., historical data), set `α_i` and `β_i` accordingly.
+- If you have prior knowledge (e.g., historical data), set ![ai](images/ai.png) and ![bi](images/bi.png) accordingly.
 
-3. **Posterior**: The posterior distribution for `p_i` is also a Beta distribution:
+3. **Posterior**: The posterior distribution for ![pi](images/pi.png) is also a Beta distribution:
 
    ![posterior distribution for pi](images/3Beta.png)
 
