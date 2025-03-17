@@ -1,5 +1,5 @@
 # Bayesian-candidates
-
+ 
 # Bayesian Approach to Calculate Confidence Intervals for Election Results
 
 When dealing with small sample sizes or incomplete data, a **Bayesian approach** can be particularly useful because it allows us to incorporate prior knowledge (or assumptions) about the election results into the analysis. This is especially relevant when classical frequentist methods fail due to insufficient data.
@@ -13,13 +13,12 @@ When dealing with small sample sizes or incomplete data, a **Bayesian approach**
 ## Bayesian Model:
 
 1. **Likelihood**: Assume the observed vote counts follow a **binomial distribution**:
-
-   ![Likelihood - Binomial distribution](images/1Binomial.png)
+   $$y_i \sim \text{Binomial}(n_i, p_i)$$
 
 where:
-- ![yi](images/yi.png) is the number of votes observed for candidate `i`,
-- ![ni](images/ni.png) is the total number of votes sampled for candidate `i`,
-- ![pi](images/pi.png) is the unknown proportion of votes for candidate `i`.
+- $$y_i$$ is the number of votes observed for candidate `i`,
+- $$n_i$$ is the total number of votes sampled for candidate `i`,
+- $$p_i$$ is the unknown proportion of votes for candidate `i`.
 
 2. **Prior**: Use a **Beta distribution** as the prior for ![pi](images/pi.png), which is conjugate to the binomial likelihood:
    
